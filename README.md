@@ -7,7 +7,7 @@ This repository contains PyTorch implementation of our paper [Towards Diverse Pa
 - PyTorch 1.2
 - numpy, tqdm, h5py, scipy, six
 
-## Training
+## Training & Inference
 
 ### Data preparation
 1. Download the pre-extracted video features of ActivityNet Captions or Charades Captions datasets from [BaiduNetdisk](https://pan.baidu.com/s/1NdlziFgGgSM__hOQi5mNKQ) (code: he21).
