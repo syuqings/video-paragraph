@@ -1,0 +1,11 @@
+{ "output_dir": "../results/charades/dm.token.rl",
+  "ft_root": "../ordered_feature/charades/",
+  "cap_file": "../data/charades/ref_paragraphs.json",
+  "word2int_file": "../data/charades/word2int.json",
+  "int2word_file": "../data/charades/int2word.json",
+  "name_file": {
+    "tst": "../public_split/charades/tst.npy",
+    "val": "../public_split/charades/tst.npy",
+    "trn": "../public_split/charades/trn.npy"
+  }
+}

@@ -1,0 +1,11 @@
+{ "output_dir": "../results/activitynet/key_frames",
+  "ft_root": "../ordered_feature/activitynet/",
+  "cap_file": "../data/activitynet/ref_paragraphs.json",
+  "word2int_file": "../data/activitynet/word2int.json",
+  "int2word_file": "../data/activitynet/int2word.json",
+  "name_file": {
+    "tst": "../public_split/activitynet/ae_test.npy",
+    "val": "../public_split/activitynet/ae_val.npy",
+    "trn": "../public_split/activitynet/trn.npy"
+  }
+}

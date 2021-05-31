@@ -1,0 +1,49 @@
+{
+  "decay_boundarys": [], 
+  "val_per_epoch": true,
+  "trn_batch_size": 10,
+  "tst_batch_size": 100,
+  "num_epoch": 50, 
+  "decay_schema": null, 
+  "subcfgs": {
+    "transformer": {
+      "lr_mult": 1.0,
+      "freeze": false,
+      "max_words_in_sent": 100,
+      "ft_dim": 3072,
+      "vocab": 2692,
+      "dropout": 0.1,
+      "keyframes": false,
+      "rl": true,
+      "document_freq": "../data/charades/4-gram-phrases-count.json"
+    },
+   "vis_enc": {
+      "ft_dim": 3072,
+      "hidden_size": 512,
+      "rnn_type": "lstm",
+      "num_layers": 1,
+      "bidirectional": true,
+      "dropout": 0.2,
+      "lr_mult": 1.0,
+      "freeze": true
+    }
+  }, 
+  "monitor_iter": 50, 
+  "save_per_epoch": true,
+  "val_per_epoch": true,
+  "val_iter": -1,
+  "save_iter": -1, 
+  "subcfg_types": {
+    "transformer": "TransformerConfig",
+    "vis_enc": "VideoEncoderConfig"
+  }, 
+  "base_lr": 1e-5, 
+  "opt_alg": "Adam",
+  "warmup": -1,
+  "decay_rate": 1, 
+  "summary_iter": 100, 
+  "submod_types": {
+    "transformer": "Transformer",
+    "vis_enc": "VideoEncoder"
+  }
+}
