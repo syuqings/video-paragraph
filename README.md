@@ -19,17 +19,18 @@ This repository contains PyTorch implementation of our paper [Towards Diverse Pa
 $ cd driver
 $ CUDA_VISIBLE_DEVICES=0 python transformer.py ../results/*/dm.token/model.json ../results/*/dm.token/path.json --is_train
 ```
-2. Fine-tune the pretrained model using self-critical with both accuracy and diversity rewards.
-```bash
-$ cd driver
-$ CUDA_VISIBLE_DEVICES=0 python transformer.py ../results/*/dm.token.rl/model.json ../results/*/dm.token.rl/path.json --is_train --resume_file ../results/*/dm.token/model/epoch.*.th
-```
-3. Train our model with key frames selection.
+&emsp;If you want to train the model with key frames selection, you can perform the following instruction instead.
 ```bash
 $ cd driver
 $ CUDA_VISIBLE_DEVICES=0 python transformer.py ../results/*/key_frames/model.json ../results/*/key_frames/path.json --is_train --resume_file ../results/*/key_frames/pretrained.th
 ```
-It will achieve a slightly worse result with only a half of the video features used at inference phase for faster decoding. You need to download the [pretrained.th](https://drive.google.com/file/d/1FdtYnrAv5dAuikOZLOiEvMBehFbY2CTz/view?usp=sharing) model at first for the key-frame selection.
+&emsp;It will achieve a slightly worse result with only a half of the video features used at inference phase for faster decoding. You need to download the [pretrained.th](https://drive.google.com/file/d/1FdtYnrAv5dAuikOZLOiEvMBehFbY2CTz/view?usp=sharing) model at first for the key-frame selection.
+
+2. Fine-tune the pretrained model in step 1 with reinforcement learning.
+```bash
+$ cd driver
+$ CUDA_VISIBLE_DEVICES=0 python transformer.py ../results/*/dm.token.rl/model.json ../results/*/dm.token.rl/path.json --is_train --resume_file ../results/*/dm.token/model/epoch.*.th
+```
 
 ### Evaluation
 The trained checkpoints have been saved at the ```results/*/folder/model/``` directory. After evaluation, the generated captions (corresponding to the name file in the public_split) and evaluating scores will be saved at ```results/*/folder/pred/tst/```.
